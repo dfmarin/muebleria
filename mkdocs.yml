@@ -1,0 +1,54 @@
+site_name: Documentación Muebleria
+site_description: Documentación oficial de Muebleria
+site_author: Diego Fernando Marin
+
+repo_url: https://github.com/dfmarin/muebleria
+
+nav:
+  - Inicio: index.md
+  - Instalación: instalacion.md
+  - Documentación del Código: documentacion.md
+  - Diagramas: diagramas.md
+
+theme:
+  name: material
+  color_mode: light
+  user_color_mode_toggle: true
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/white-balance-sunny
+        name: Cambiar a modo claro
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: .
+  - mermaid2:
+      version: 10.4.0
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
