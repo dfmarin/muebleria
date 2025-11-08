@@ -21,17 +21,18 @@ theme:
     - toc.integrate
   palette:
     - scheme: default
-      primary: indigo
-      accent: indigo
+      primary: teal
       toggle:
         icon: material/weather-night
         name: Cambiar a modo oscuro
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: teal
       toggle:
         icon: material/white-balance-sunny
         name: Cambiar a modo claro
+
+extra_css:
+  - stylesheets/custom.css
 
 plugins:
   - search

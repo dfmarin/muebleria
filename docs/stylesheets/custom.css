@@ -1,0 +1,74 @@
+/* -----------------------------------------
+   custom.css
+   Tema personalizado basado en MkDocs Material
+   Color corporativo: SeaGreen (#2E8B57)
+   ----------------------------------------- */
+
+/* Colores principales */
+:root {
+  --md-primary-fg-color: #2E8B57;      /* SeaGreen principal */
+  --md-primary-fg-color--light: #3cb371; /* Versión más clara */
+  --md-primary-fg-color--dark: #206944;  /* Versión más oscura */
+  --md-accent-fg-color: #3cb371;       /* Verde brillante para acentos */
+}
+
+/* Cambia el color de los enlaces */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+}
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--dark);
+}
+
+/* Personaliza el encabezado superior */
+.md-header {
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+/* Color de los botones y elementos interactivos */
+.md-button,
+.md-nav__link--active,
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+/* Hover de botones */
+.md-button:hover {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* Pie de página */
+.md-footer {
+  background-color: var(--md-primary-fg-color--dark);
+  color: #e5e5e5;
+}
+
+/* Códigos y bloques resaltados */
+.md-typeset code {
+  color: #2e8b57;
+  background-color: #eaf4ed;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
+.md-typeset pre code {
+  background-color: #eaf4ed;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  color: var(--md-primary-fg-color--dark);
+}
+
+/* Tabla de contenidos lateral */
+.md-nav__link:hover {
+  color: var(--md-primary-fg-color);
+}
+
+/* Iconos del modo oscuro (opcional si usas el toggle) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2E8B57;
+  --md-accent-fg-color: #3cb371;
+}
